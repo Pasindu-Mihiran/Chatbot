@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty Grill</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+</head>
+<body>
+    <header>
+        <div class="logo">Liberty Grill</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order Online</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1 class="hero-text-header">Taste the Freedom of Flavor!</h1>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Experience the essence of American culinary tradition at Liberty Grill, where we proudly present beloved classics with a patriotic flair. Our menu showcases the finest in American fast food, featuring everything from mouthwatering burgers to indulgent mac and cheese. </p>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="Images/Hamburger.jpg" alt="Hamburger">
+                <h3>Hamburger</h3>
+                <p>Juicy, all-beef patty topped with fresh lettuce, tomato, and our signature sauce.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Pizza.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Cheesy, crispy, and loaded with your favorite toppings.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Fried Chicken.jpg" alt="Fried Chicken">
+                <h3>Fried Chicken</h3>
+                <p>Crispy, golden-brown chicken with a blend of secret spices.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Mac and Cheese.jpg" alt="Mac and Cheese">
+                <h3>Mac and Cheese</h3>
+                <p>Creamy, cheesy goodness made with the finest ingredients.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Steak.jpg" alt="Steak">
+                <h3>Steak</h3>
+                <p>Perfectly grilled, tender steak seasoned to perfection.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/BBQ Ribs.jpg" alt="BBQ Ribs">
+                <h3>BBQ Ribs</h3>
+                <p>Slow-cooked ribs slathered in our tangy BBQ sauce.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Sweet Tea.jpg" alt="Sweet Tea">
+                <h3>Sweet Tea</h3>
+                <p>Refreshing, sweet iced tea brewed to perfection.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Coffee.jpg" alt="Coffee">
+                <h3>Coffee</h3>
+                <p>Rich and aromatic coffee to perk up your day.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Soda.jpg" alt="Soda">
+                <h3>Soda</h3>
+                <p>A variety of your favorite fizzy drinks.</p>
+            </div>
+            <div class="menu-item">
+                <img src="Images/Milkshake.jpg" alt="Milkshake">
+                <h3>Milkshake</h3>
+                <p>Thick and creamy milkshakes in classic flavors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <h2>Order Online</h2>
+        <a href="#" class="btn">Order Now</a>
+        <iframe
+        allow="microphone;"
+        width="350"
+        height="430"
+        class="chat-bot"
+        background= #FEFFFF
+        src="https://console.dialogflow.com/api-client/demo/embedded/949866c7-65bc-41cb-95a5-cd26a18cffff">
+        </iframe>
+       
+    </section>
+
+    <section id="locations" class="locations-section">
+        <h2>Our Locations</h2>
+        <p>Find the nearest Liberty Grill near you!</p>
+        
+        <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- define a the area the map will go into. Feel free to change the size as needed -->
+    <div id="map" style="width: 100%; height: 500px"></div>
+    <script>
+      var map = L.map("map").setView([40.7128, -74.0060], 12);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 7,
+        
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+      map.setView([40.7128, -74.0060], 10);
+      L.marker([40.7128, -74.0060]).addTo(map);
+    </script>
+        
+    </section>
+ 
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a> | 
+            <a href="#menu">Menu</a> | 
+            <a href="#order">Order Online</a> | 
+            <a href="#locations">Locations</a> | 
+            <a href="#about">About Us</a> | 
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+        <p>© 2024 Liberty Grill. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
